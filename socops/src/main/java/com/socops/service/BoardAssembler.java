@@ -1,9 +1,5 @@
 package com.socops.service;
 
-import com.socops.data.IcebreakerPrompts;
-import com.socops.model.BingoCell;
-import com.socops.model.WinningStreak;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -11,6 +7,10 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.IntStream;
+
+import com.socops.data.IcebreakerPrompts;
+import com.socops.model.BingoCell;
+import com.socops.model.WinningStreak;
 
 /**
  * Pure-logic helper that builds boards, flips tiles, and spots victories.
@@ -41,7 +41,8 @@ public final class BoardAssembler {
         for (int slot = 0; slot < GRID_SIDE * GRID_SIDE; slot++) {
             if (slot == CENTER_SLOT) {
                 freshBoard.add(BingoCell.ofFreeCell(slot));
-            } else {
+            }
+            else {
                 freshBoard.add(BingoCell.ofPrompt(slot, chosenPrompts.get(promptCursor)));
                 promptCursor++;
             }
@@ -59,7 +60,8 @@ public final class BoardAssembler {
         for (BingoCell tile : board) {
             if (tile.id() == cellId && !tile.freeCell()) {
                 updatedBoard.add(new BingoCell(tile.id(), tile.prompt(), !tile.selected(), false));
-            } else {
+            }
+            else {
                 updatedBoard.add(tile);
             }
         }
