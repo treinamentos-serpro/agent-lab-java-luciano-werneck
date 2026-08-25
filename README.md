@@ -1,14 +1,49 @@
 🌐 [Português (BR)](README.pt_BR.md) | [Español](README.es.md)
 
-# Soc Ops
+# Soc Ops 🎯
 
-Social Bingo game for in-person mixers. Find people who match the questions and get 5 in a row!
+Build a playful **Social Bingo** web app while learning modern **GitHub Copilot agent workflows**.
 
-📚 **[View Lab Guide](workshop/GUIDE.md)**
+Find people who match bingo prompts, mark cards in real time, and race to 5 in a row.
+
+🌐 [Português (BR)](README.pt_BR.md) | [Español](README.es.md)
+
+[🎮 Live Demo](https://copilot-dev-days.github.io/agent-lab-java/) • [📚 Lab Guide](workshop/GUIDE.md) • [📖 Workshop Docs](docs/)
 
 ---
 
-## 📚 Lab Guide
+## Why this project?
+
+- Learn by building a complete Java + Spring Boot app
+- Practice context engineering and multi-agent development
+- Deliver visible, interactive frontend improvements quickly
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- [Java 21 JDK](https://adoptium.net/) or higher
+- [Apache Maven 3.9+](https://maven.apache.org/) (or use the included Maven Wrapper)
+
+### Run locally
+```bash
+cd socops
+./mvnw spring-boot:run
+```
+
+Open: http://localhost:8080
+
+### Build and test
+```bash
+cd socops
+./mvnw clean package
+./mvnw test
+```
+
+---
+
+## 📚 Lab Journey
 
 | Part | Title |
 |------|-------|
@@ -18,34 +53,8 @@ Social Bingo game for in-person mixers. Find people who match the questions and 
 | [**03**](workshop/03-quiz-master.md) | Custom Quiz Master |
 | [**04**](workshop/04-multi-agent.md) | Multi-Agent Development |
 
-> 📝 Lab guides are also available in the [`workshop/`](workshop/) folder for offline reading.
+> 📝 Prefer offline reading? Use the [`workshop/`](workshop/) folder.
 
 ---
-
-## Prerequisites
-
-- [Java 21 JDK](https://adoptium.net/) or higher
-- [Apache Maven 3.9+](https://maven.apache.org/) (or use the included Maven Wrapper)
-
-## Run
-
-```bash
-cd socops
-./mvnw spring-boot:run
-```
-
-## Build
-
-```bash
-cd socops
-./mvnw clean package
-```
-
-## Test
-
-```bash
-cd socops
-./mvnw test
-```
 
 Deploys automatically to GitHub Pages on push to `main`.
